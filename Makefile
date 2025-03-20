@@ -4,10 +4,20 @@ render-build:
 		bundle exec rails assets:clean
 		bundle exec rails db:migrate
 
-render-start:
-		bin/rails server
+install:
+		bin/setup
 
 test:
 		bin/rails test
+
+render-start:
+		bin/rails server
+
+lint:
+		bundle exec rubocop
+		bundle exec slim-lint app/views/
+
+lint-fix:
+		bundle exec rubocop -A
 
 .PHONY: test
