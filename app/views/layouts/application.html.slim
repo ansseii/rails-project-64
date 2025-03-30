@@ -1,17 +1,22 @@
 doctype html
-html
+html.h-100
   head
     title Collective Blog
     == csrf_meta_tags
     == csp_meta_tag
-    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    meta name="viewport" content="width=device-width, initial-scale=1"
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
     = javascript_include_tag 'application', 'data-turbo-track': 'reload', type: 'module'
 
   body.d-flex.flex-column.h-100
+    header
+      = render 'layouts/shared/nav'
 
-    = render 'layouts/shared/nav'
+    main.flex-shrink-0
+      .container.pt-5.px-3
+        = render 'layouts/shared/flash'
+        == yield
 
-    = render 'layouts/shared/flash'
-
-    == yield
+    / footer.mt-auto.py-3.bg-light
+    /   .container
+    /     span.text-muted Footer text
