@@ -192,9 +192,8 @@ ru:
     select:
       prompt: 'Выберите: '
     submit:
-      create: Создать %{model}
-      submit: Сохранить %{model}
-      update: Сохранить %{model}
+      post:
+        create: Опубликовать
   number:
     currency:
       format:
