@@ -13,12 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
-          cache: npm
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -27,6 +21,9 @@ jobs:
 
       - name: Setup
         run: make install
+        env:
+          DUMMY_USER: ${{ vars.DUMMY_USER }}
+          DUMMY_PASSWORD: ${{ vars.DUMMY_PASSWORD }}
 
       - name: Run tests
         run: make test
