@@ -1,0 +1,20 @@
+- body_validator = Post.validators_on(:body).grep(ActiveModel::Validations::LengthValidator).first
+- min_body = body_validator.options[:minimum]
+- max_body = body_validator.options[:maximum]
+
+- title_validator = Post.validators_on(:title).grep(ActiveModel::Validations::LengthValidator).first
+- min_title = title_validator.options[:minimum]
+- max_title = title_validator.options[:maximum]
+
+= simple_form_for(@post) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  = f.input :title,
+          hint: t('simple_form.hints.post.title', min_title: min_title, max_title: max_title)
+  = f.association :category
+  = f.input :body,
+          input_html: { rows: 10, maxlength: max_body },
+          hint: t('simple_form.hints.post.body', min_body: min_body, max_body: max_body)
+
+  = f.button :submit, class: 'btn btn-primary'

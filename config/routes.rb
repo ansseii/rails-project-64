@@ -3,5 +3,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'hello#index'
+  root 'posts#index'
+
+  resources :posts, only: %i[show create new]
 end

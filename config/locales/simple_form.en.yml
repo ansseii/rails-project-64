@@ -1,0 +1,13 @@
+en:
+  simple_form:
+    hints:
+      post:
+        title: "%{min_title} - %{max_title} symbols"
+        body: "От %{min_body} до %{max_body} символов"
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: 'Please, fix the errors below:'

@@ -1,0 +1,7 @@
+ru:
+  activerecord:
+    attributes:
+      post:
+        title: Название
+        category: Категория
+        body: Текст поста

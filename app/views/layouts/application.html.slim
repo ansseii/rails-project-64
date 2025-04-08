@@ -1,7 +1,7 @@
 doctype html
 html.h-100
   head
-    title Collective Blog
+    title = t('.title')
     == csrf_meta_tags
     == csp_meta_tag
     meta name="viewport" content="width=device-width, initial-scale=1"
@@ -10,13 +10,11 @@ html.h-100
 
   body.d-flex.flex-column.h-100
     header
-      = render 'layouts/shared/nav'
+      .container.mb-2
+        .d-flex.flex-wrap.align-items-center.py-2.border-bottom
+          = render 'layouts/shared/nav'
 
-    main.flex-shrink-0
-      .container.pt-5.px-3
+    main
+      .container.my-4
         = render 'layouts/shared/flash'
         == yield
-
-    / footer.mt-auto.py-3.bg-light
-    /   .container
-    /     span.text-muted Footer text

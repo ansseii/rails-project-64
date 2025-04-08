@@ -1,0 +1,18 @@
+ru:
+  simple_form:
+    labels:
+      post:
+        title: Название
+        category: Категория
+        body: Текст поста
+    hints:
+      post:
+        title: "%{min_title} - %{max_title} символов"
+        body: "От %{min_body} до %{max_body} символов"
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'обязательное'
+      mark: '*'
+    error_notification:
+      default_message: 'Пожалуйста, исправьте ошибки:'

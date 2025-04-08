@@ -25,5 +25,10 @@ module CollectiveBlog
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # noinspection RubyResolve
+    config.i18n.default_locale = :ru
+    # noinspection RubyResolve
+    config.i18n.available_locales = %i[en ru]
   end
 end
