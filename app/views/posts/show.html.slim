@@ -16,3 +16,12 @@ ol.breadcrumb
           = @post.creator.email
         span
           = distance_of_time_in_words(Time.current, @post.created_at)
+
+#comment-section.lead.mt-3
+  span = t('.comments_title')
+
+  -if user_signed_in?
+    == render 'posts/comments/comment_form'
+
+  - @post_comments.each do |comment, children|
+    = render 'posts/comments/post_comment', comment: comment, children: children

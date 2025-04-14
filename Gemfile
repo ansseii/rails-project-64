@@ -7,6 +7,7 @@ gem 'cssbundling-rails'
 gem 'devise'
 gem 'devise-i18n'
 # 'devise-i18n' must be declared before 'devise-bootstrap-views'. See https://github.com/hisea/devise-bootstrap-views?tab=readme-ov-file#i18n
+gem 'ancestry'
 gem 'devise-bootstrap-views'
 gem 'faker'
 gem 'jbuilder'

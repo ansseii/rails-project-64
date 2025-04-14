@@ -14,5 +14,9 @@ en:
       app_name: Collective blog
     show:
       all_posts: All posts
+      comments_title: "Comments"
     new:
       new_post: New post
+    comments:
+      answer_comment_form:
+        comment_answer: "Answer"

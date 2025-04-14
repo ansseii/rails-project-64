@@ -5,3 +5,9 @@ ru:
         title: Название
         category: Категория
         body: Текст поста
+      post_comment:
+        content: Тело комментария
+  posts:
+    comments:
+      answer_comment_form:
+        comment_answer: "Ответить"

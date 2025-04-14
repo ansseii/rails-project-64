@@ -2,3 +2,6 @@ ru:
   posts:
     create:
       success: Пост успешно создан.
+    comments:
+      create:
+        success: Комментарий успешно добавлен.

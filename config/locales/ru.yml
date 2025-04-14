@@ -15,6 +15,7 @@ ru:
       app_name: Коллективный блог
     show:
       all_posts: Все посты
+      comments_title: "Комментарии"
     new:
       new_post: Новый пост
 
@@ -194,6 +195,8 @@ ru:
     submit:
       post:
         create: Опубликовать
+      post_comment:
+        create: Оставить комментарий
   number:
     currency:
       format:

@@ -1,0 +1,5 @@
+en:
+  posts:
+    comments:
+      create:
+        success: Comment has been added.

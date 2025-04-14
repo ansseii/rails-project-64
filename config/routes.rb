@@ -5,5 +5,9 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
-  resources :posts, only: %i[show create new]
+  resources :posts, only: %i[show create new] do
+    scope module: :posts do
+      resources :comments, only: :create
+    end
+  end
 end

@@ -9,6 +9,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.includes(:category, :creator).find(params[:id])
+    @post_comment = @post.comments.build
+    @post_comments = PostComment.includes(:user)
+                                .where(post_id: params[:id])
+                                .order(created_at: :desc).arrange
   end
 
   def new
