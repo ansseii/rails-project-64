@@ -1,4 +1,6 @@
-a.fs-6.text-decoration-underline.text-lowercase type='button' data-bs-toggle='collapse' data-bs-target="#answer_comment-#{parent_id}" aria-expanded='false' aria-controls="answer_comment-#{parent_id}"
+a.fs-6.text-decoration-underline.text-lowercase[type='button' data-bs-toggle='collapse'
+  data-bs-target="#answer_comment-#{parent_id}" aria-expanded='false'
+  aria-controls="answer_comment-#{parent_id}"]
   = t('.comment_answer')
 
 .collapse.ms-2 id="answer_comment-#{parent_id}"
