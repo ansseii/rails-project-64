@@ -20,3 +20,9 @@ en:
     comments:
       answer_comment_form:
         comment_answer: "Answer"
+  helpers:
+    submit:
+      post:
+        create: Publish
+      post_comment:
+        create: Leave comment

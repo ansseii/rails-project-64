@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
+  post 'locale', to: 'locales#update', as: :set_locale
+
   resources :posts, only: %i[show create new] do
     scope module: :posts do
       resources :comments, only: :create
