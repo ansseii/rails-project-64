@@ -17,10 +17,24 @@ ol.breadcrumb
         span
           = distance_of_time_in_words(Time.current, @post.created_at)
 
+      #likes-section
+        span.me-2
+          = @post.likes.count
+
+        - if user_signed_in?
+          - if @liked
+            = link_to post_like_url(@post, @liked), data: { turbo_method: :delete }, class: 'link-dark' do
+              i.bi.bi-hand-thumbs-up-fill
+          - else
+            = link_to post_likes_url(@post), data: { turbo_method: :post }, class: 'link-dark' do
+              i.bi.bi-hand-thumbs-up
+        - else
+          i.bi.bi-hand-thumbs-up
+
 #comment-section.lead.mt-3
   span = t('.comments_title')
 
-  -if user_signed_in?
+  - if user_signed_in?
     == render 'posts/comments/comment_form'
 
   - @post_comments.each do |comment, children|

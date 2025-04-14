@@ -7,4 +7,5 @@ class Post < ApplicationRecord
   belongs_to :category
   belongs_to :creator, class_name: 'User'
   has_many :comments, dependent: :delete_all, class_name: 'PostComment'
+  has_many :likes, dependent: :delete_all, class_name: 'PostLike'
 end

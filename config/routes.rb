@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :posts, only: %i[show create new] do
     scope module: :posts do
       resources :comments, only: :create
+      resources :likes, only: %i[create destroy]
     end
   end
 end
